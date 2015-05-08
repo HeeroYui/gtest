@@ -1,6 +1,6 @@
 #!/usr/bin/python
-import lutinModule as module
-import lutinTools as tools
+import lutin.module as module
+import lutin.tools as tools
 
 def get_desc():
 	return "gtest : google test interface"
@@ -24,7 +24,7 @@ def create(target):
 		'src/gtest-typed-test.cc'
 		])
 	
-	myModule.compile_flags_CC([
+	myModule.compile_flags('c', [
 		'-DPNG_NO_LIMITS_H'])
 	
 	myModule.add_path(tools.get_current_path(__file__))
